@@ -1,0 +1,123 @@
+:root {
+    --white: #FFFFFF;
+    --ice-blue: #F4F7F9;
+    --slate-blue: #2C3E50;
+    --silver: #C0C0C0;
+    --accent-blue: #5D8AA8;
+    --text-main: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--white);
+    border-bottom: 1px solid var(--ice-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-color: var(--ice-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--silver);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--slate-blue);
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-blue);
+}
+
+/* Value Prop Section */
+.value-prop {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.value-prop h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
