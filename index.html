@@ -22,39 +22,31 @@
         <div class="hero-content">
             <h1>Clinical Strength.<br><span class="italic">Elevated Experience.</span></h1>
             <p>The first Ketoconazole treatment designed for the luxury vanity.</p>
-            <a href="#waitlist" class="btn">Join the Waitlist</a>
+            <button class="btn" id="openWaitlist">Join the Waitlist</button>
         </div>
     </header>
 
-    <section class="value-prop">
-        <div class="container">
-            <h2>Nourished, Not Stripped.</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Soft-Touch Finish</h3>
-                    <p>Unlike traditional medicated shampoos that leave hair feeling like straw, ASIYA integrates premium conditioning agents to keep strands silky.</p>
-                </div>
-                <div class="card">
-                    <h3>Apothecary Scents</h3>
-                    <p>No medicinal odors. Just sophisticated, clean notes that make your treatment feel like a ritual, not a chore.</p>
-                </div>
-                <div class="card">
-                    <h3>Proven Science</h3>
-                    <p>Formulated with 1% Ketoconazole to target scalp health at the source while maintaining moisture.</p>
-                </div>
-            </div>
+    <section class="home-philosophy">
+        <div class="content-narrow text-center">
+            <h2>The Unbundling of the Pharmacy.</h2>
+            <p>For too long, medicated hair care has been a trade-off. You chose between clinical results or a pleasant sensory experience.</p>
+            <p>ASIYA was born to end the compromise. We believe medical-grade ingredients belong in luxury packaging with world-class formulations that treat your hair as well as your scalp.</p>
         </div>
     </section>
 
-    <section id="waitlist" class="waitlist-section">
-        <div class="container">
-            <h2>Secure Your Access</h2>
-            <p>Be the first to experience ASIYA. Enter your email below to join the launch list.</p>
-            <!-- Formspree: Create a free account at formspree.io and replace the ID below -->
-            <form action="https://formspree.io/f/xojrejgg" method="POST" class="waitlist-form">
-                <input type="email" name="email" placeholder="Your Email Address" required>
-                <button type="submit" class="btn">Keep Me Updated</button>
-            </form>
+    <!-- The Integrated Waitlist Form (Hidden by default) -->
+    <section id="waitlistForm" class="waitlist-integrated hidden">
+        <div class="container-narrow">
+            <div class="form-wrapper">
+                <button class="close-form" id="closeWaitlist">&times;</button>
+                <h2>Secure Early Access</h2>
+                <p>We’re finalizing the wash. Join the list to be notified of the first drop.</p>
+                <!-- Formspree ID goes here -->
+                <form action="https://formspree.io/f/your-id-here" method="POST" class="standard-form">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-full">Keep Me Updated</button>
+                </form>
+            </div>
         </div>
     </section>
 
