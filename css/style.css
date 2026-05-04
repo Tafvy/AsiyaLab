@@ -1,69 +1,240 @@
 :root {
     --white: #FFFFFF;
     --ice-blue: #F4F7F9;
-    --slate-blue: #2C3E50;
-    --silver: #C0C0C0;
-    --silver-light: #D9D9D9;
+    --slate-blue: #2C3E50; /* Primary Brand Blue */
     --accent-blue: #5D8AA8;
-    --text-main: #1A1A1A;
+    --silver: #D1D5D8;
+    --text-body: #444444;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: var(--text-main); scroll-behavior: smooth; overflow-x: hidden;}
-.italic { font-family: 'Playfair Display', serif; font-style: italic; }
+/* Global Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Navbar */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: var(--white); border-bottom: 1px solid var(--ice-blue); position: sticky; top: 0; z-index: 1000; }
-.logo { font-size: 1.5rem; font-weight: 600; letter-spacing: 4px; }
-.nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { text-decoration: none; color: var(--text-main); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
-.nav-links a.active { color: var(--accent-blue); font-weight: 600; }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-body);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
 
-/* Hero */
-.hero { height: 75vh; background-color: var(--ice-blue); display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 1px solid var(--silver); }
-.hero h1 { font-size: 3.5rem; font-weight: 300; margin-bottom: 1rem; }
-.hero-content { max-width: 600px; }
-.hero-content p { color: #555; margin-bottom: 30px; }
+h1, h2, h3, .logo {
+    color: var(--slate-blue);
+    font-weight: 600;
+}
+
+.italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--white);
+    border-bottom: 1px solid var(--ice-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: var(--slate-blue);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-body);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-blue);
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background-color: var(--ice-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
 
 /* Buttons */
-.btn { display: inline-block; padding: 1.1rem 2.5rem; background: var(--slate-blue); color: var(--white); text-decoration: none; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s ease; }
-.btn:hover { background: var(--accent-blue); }
-.btn-full { width: 100%; text-align: center; }
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--slate-blue);
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
 
-/* Integrated Waitlist UI (NEW) */
-.waitlist-integrated { position: fixed; bottom: 0; left: 0; width: 100%; padding: 40px; background: var(--white); border-top: 1px solid var(--silver); z-index: 2000; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); transition: transform 0.5s ease-in-out; }
-.waitlist-integrated.hidden { transform: translateY(100%); display: none; }
-.container-narrow { max-width: 500px; margin: 0 auto; position: relative; }
-.form-wrapper h2 { text-align: center; font-size: 1.8rem; font-weight: 400; margin-bottom: 10px; }
-.form-wrapper p { text-align: center; color: #666; margin-bottom: 20px; font-size: 0.9rem; }
-.standard-form { display: flex; flex-direction: column; gap: 15px; }
-.standard-form input { padding: 1rem; border: 1px solid var(--silver-light); font-family: 'Inter', sans-serif; font-size: 1rem;}
-.close-form { position: absolute; top: -10px; right: -10px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #999; }
+.btn:hover {
+    background: var(--accent-blue);
+}
 
-/* Home Philosophy */
-.home-philosophy { padding: 80px 10%; }
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
 
-/* Shop Page: Product Layout (NEW Image integration) */
-.product-reveal { height: 90vh; }
-.product-grid { display: grid; grid-template-columns: 1fr 1fr; height: 100%; align-items: center; border-bottom: 1px solid var(--silver-light); }
-.product-image-container { height: 100%; width: 100%; background: #F8FAFB; border-right: 1px solid var(--silver-light); overflow: hidden;}
-.product-image { height: 100%; width: 100%; object-fit: cover; object-position: center; }
-.product-info { padding: 10%; }
-.eyebrow { color: var(--accent-blue); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; display: block; margin-bottom: 5px; }
-.formula-type { margin: 10px 0; font-style: italic; color: #666; font-size: 0.9rem;}
-.label { display: inline-block; padding: 4px 8px; background: var(--ice-blue); color: var(--accent-blue); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 2px; margin-bottom: 15px;}
-.specs { list-style: none; margin: 30px 0; }
-.specs li { margin-bottom: 12px; font-weight: 300; }
-.accent-text { color: var(--accent-blue); font-weight: 600; }
+/* Product Grid (The Formula Page) */
+.product-reveal {
+    min-height: 90vh;
+    padding: 5% 0;
+}
 
-/* Elaborate Story (About) */
-.elaborate-story { padding: 80px 0; background: var(--white); }
-.story-block { margin-bottom: 80px; padding: 0 10%;}
-.story-block h2 { font-size: 2.2rem; font-weight: 400; margin-bottom: 20px; color: var(--slate-blue);}
-.divider-line { width: 60px; height: 1px; background-color: var(--silver); margin: 0 auto 80px; }
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
 
-/* Utility */
-.text-center { text-center; }
-.text-right { text-align: right; }
-.content-narrow { max-width: 700px; margin: 0 auto; line-height: 1.9; color: #444;}
-.container { width: 80%; margin: 0 auto; }
+.product-image-container {
+    text-align: center;
+}
+
+.product-image {
+    max-width: 90%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+}
+
+.formula-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    margin: 10px 0;
+}
+
+.label {
+    display: inline-block;
+    background: var(--ice-blue);
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Specs List */
+.specs {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.specs li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    color: var(--accent-blue);
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+/* Waitlist UI */
+.waitlist-integrated {
+    margin-top: 20px;
+    padding: 25px;
+    background: var(--ice-blue);
+    border: 1px solid var(--silver);
+    border-radius: 4px;
+    position: relative;
+}
+
+.hidden { display: none; }
+
+.standard-form {
+    display: flex;
+    gap: 10px;
+}
+
+.standard-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--silver);
+    font-family: inherit;
+}
+
+.close-form {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--silver);
+}
+
+/* About / Story Styling */
+.about-content, .home-philosophy {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.content-narrow {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-block {
+    margin-bottom: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .standard-form {
+        flex-direction: column;
+    }
+}
