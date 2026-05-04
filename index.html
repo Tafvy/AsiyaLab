@@ -36,21 +36,18 @@
         </div>
     </section>
 
-    <!-- The Integrated Waitlist Form (Hidden by default) -->
-    <section id="waitlistForm" class="waitlist-integrated hidden">
-        <div class="container-narrow">
-            <div class="form-wrapper">
-                <button class="close-form" id="closeWaitlist">&times;</button>
-                <h2>Secure Early Access</h2>
-                <p>We’re finalizing the wash. Join the list to be notified of the first drop.</p>
-                <!-- Formspree ID goes here -->
-                <form action="https://formspree.io/f/your-id-here" method="POST" class="standard-form">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                    <button type="submit" class="btn btn-full">Keep Me Updated</button>
-                </form>
-            </div>
+    <!-- Waitlist Modal Overlay -->
+    <div id="waitlistForm" class="waitlist-modal hidden">
+        <div class="form-wrapper">
+            <button class="close-form" id="closeWaitlist">&times;</button>
+            <h2>Secure Early Access</h2>
+            <p>We’re finalizing the wash. Join the list to be notified of the first drop.</p>
+            <form action="https://formspree.io/f/your-id-here" method="POST" class="standard-form">
+                <input type="email" name="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn btn-full">Keep Me Updated</button>
+            </form>
         </div>
-    </section>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

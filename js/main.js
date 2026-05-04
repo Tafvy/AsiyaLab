@@ -18,4 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
             waitlistForm.classList.add('hidden');
         });
     }
+
+    // Close modal by clicking the dark backdrop
+    if (waitlistForm && waitlistForm.classList.contains('waitlist-modal')) {
+        waitlistForm.addEventListener('click', (e) => {
+            if (e.target === waitlistForm) {
+                waitlistForm.classList.add('hidden');
+            }
+        });
+    }
 });
