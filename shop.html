@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Formula | ASIYA</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -20,22 +21,40 @@
     <section class="product-reveal">
         <div class="product-grid">
             <div class="product-image-container">
-                <!-- *** NEW: Add your generated image to 'images/product_01.png' *** -->
-                <img src="images/product_01.png" alt="ASIYA 01: The Medicated Wash - Frosted bottle against eucalyptus" class="product-image">
+                <img src="images/product_01.png" alt="ASIYA Moisturizing Dandruff Shampoo" class="product-image">
             </div>
             <div class="product-info">
-                <span class="label">Releasing 2026</span>
-                <h1>01: The Medicated Wash</h1>
-                <p class="formula-type">1% Ketoconazole Treatment</p>
-                <p class="description">Finally, a high-potency antifungal wash that respects your hair's integrity. ASIYA is specifically formulated to eliminate scalp irritation while infusing moisture back into the hair shaft.</p>
+                <span class="label">Medical Luxury</span>
+                <h1>Moisturizing Dandruff Shampoo</h1>
+                <p class="formula-subtitle">Ketoconazole 1% • Eucalyptus & Mint</p>
+                
+                <div class="clinical-callout">
+                    <p>Designed for those who refuse to choose between a healthy scalp and beautiful hair. A clinical-grade treatment with a luxury-grade finish.</p>
+                </div>
+
                 <ul class="specs">
-                    <li>✓ No "Straw-Like" Texture</li>
-                    <li>✓ <span class="accent-text">Eucalyptus & Mint Scent</span></li>
-                    <li>✓ Sulfate-Free & Color-Safe</li>
+                    <li><span class="check">✓</span> 1% Ketoconazole for targeted relief</li>
+                    <li><span class="check">✓</span> Infused with moisture-locking botanicals</li>
+                    <li><span class="check">✓</span> Free of sulfates, parabens, and dyes</li>
+                    <li><span class="check">✓</span> No "straw-like" texture or medicinal odor</li>
                 </ul>
-                <a href="index.html#openWaitlist" class="btn">Join Waitlist</a>
+                
+                <button class="btn btn-full" id="openWaitlist">Join the Waitlist</button>
+
+                <!-- Integrated Form Logic (Same as Home) -->
+                <div id="waitlistForm" class="waitlist-integrated hidden">
+                    <div class="form-wrapper">
+                        <button class="close-form" id="closeWaitlist">&times;</button>
+                        <form action="https://formspree.io/f/your-id-here" method="POST" class="standard-form">
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn">Get Early Access</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
