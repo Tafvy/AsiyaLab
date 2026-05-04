@@ -175,7 +175,7 @@ h1, h2, h3, .logo {
     font-weight: bold;
 }
 
-/* Waitlist UI */
+/* Waitlist UI — inline (Formula page) */
 .waitlist-integrated {
     margin-top: 20px;
     padding: 25px;
@@ -183,6 +183,35 @@ h1, h2, h3, .logo {
     border: 1px solid var(--silver);
     border-radius: 4px;
     position: relative;
+}
+
+/* Waitlist UI — modal overlay (Home page) */
+.waitlist-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 62, 80, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.waitlist-modal .form-wrapper {
+    background: var(--white);
+    padding: 3rem;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+}
+
+.waitlist-modal h2 {
+    margin-bottom: 0.5rem;
+}
+
+.waitlist-modal p {
+    margin-bottom: 1.5rem;
+    color: var(--text-body);
 }
 
 .hidden { display: none; }
