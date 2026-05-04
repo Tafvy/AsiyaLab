@@ -1,13 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('TAHIRA Web Experience Loaded');
+    console.log('ASIYA Medical Luxury Loaded');
 
-    // Simple scroll effect for Navbar
-    const nav = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-        } else {
-            nav.style.boxShadow = 'none';
-        }
-    });
+    // Waitlist Form UI Toggles
+    const openWaitlistBtn = document.getElementById('openWaitlist');
+    const closeWaitlistBtn = document.getElementById('closeWaitlist');
+    const waitlistForm = document.getElementById('waitlistForm');
+
+    if (openWaitlistBtn && waitlistForm) {
+        openWaitlistBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            waitlistForm.classList.remove('hidden');
+        });
+    }
+
+    if (closeWaitlistBtn && waitlistForm) {
+        closeWaitlistBtn.addEventListener('click', () => {
+            waitlistForm.classList.add('hidden');
+        });
+    }
 });
