@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('ASIYA Medical Luxury Loaded');
+    // Hamburger nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close nav when a link is tapped
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    }
 
     // Waitlist Form UI Toggles
     const openWaitlistBtn = document.getElementById('openWaitlist');
